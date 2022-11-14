@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>CodePen - Scaled/Proportional Content with CSS and JavaScript</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+	<!-- partial:index.partial.html -->
+	<p>'</p>
+	<div>
+		<div class="very-specific-design" id="very-specific-design">
+
+			<video class="w-50"  id="miVideo" autoplay controls>
+				<source src="Modulo 5 Realidad virtual_1.mp4" type="video/mp4" />
+			  </video>
+			<a class="hide button" id="btn" href="#popup1" disabled="disabled">Comenzar</a>
+			
+	</div>
+
+	<!-- partial -->
+	<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+	<script src="./script.js"></script>
+
+	<script>
+		var element = document.getElementById('miVideo');
+
+element.onended = function() {
+     document.getElementById('btn').classList.remove("hide");
+};
+	</script>
+
+</body>
+
+</html>
